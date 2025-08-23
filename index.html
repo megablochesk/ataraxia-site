@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ataraxia Research</title>
+  <meta name="description" content="Ataraxia Research brings intelligent conversation analysis to help people understand and navigate romantic relationships with clarity and care." />
+  <style>
+    :root{
+      --bg:#faf7f2;
+      --surface:#ffffff;
+      --ink:#1f1f1f;
+      --muted:#6b6b6b;
+      --accent:#2b2b2b;
+      --max: 76ch;
+      --radius: 14px;
+      --shadow: 0 1px 1px rgba(0,0,0,.03), 0 6px 18px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#11100e;
+        --surface:#171614;
+        --ink:#eceae6;
+        --muted:#b9b6b0;
+        --accent:#eceae6;
+        --shadow: 0 1px 1px rgba(0,0,0,.5), 0 6px 18px rgba(0,0,0,.35);
+      }
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+      letter-spacing:.2px;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    .wrap{max-width: 1120px; margin:0 auto; padding:28px 20px;}
+    header{
+      position:sticky; top:0; backdrop-filter:saturate(140%) blur(6px);
+      background:color-mix(in oklab, var(--bg) 82%, transparent);
+      border-bottom:1px solid color-mix(in oklab, var(--ink) 8%, transparent);
+      z-index:10;
+    }
+    .brand{
+      display:flex; align-items:center; gap:.6rem; font-weight:600; letter-spacing:.3px;
+    }
+    .dot{width:.6rem; height:.6rem; border-radius:999px; background:var(--accent); box-shadow:0 0 0 6px color-mix(in oklab, var(--accent) 15%, transparent);}
+    nav{margin-left:auto; display:flex; gap:1rem; align-items:center;}
+    .row{display:flex; align-items:center; gap:1rem; justify-content:space-between;}
+    .link{
+      color:var(--muted); text-decoration:none; padding:.4rem .6rem; border-radius:10px; transition:background .2s ease, color .2s ease;
+    }
+    .link:hover{background:color-mix(in oklab, var(--ink) 6%, transparent); color:var(--ink)}
+
+    .hero{
+      padding:72px 0 24px;
+    }
+    .card{
+      background:var(--surface);
+      border:1px solid color-mix(in oklab, var(--ink) 8%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:38px;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    h1{
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height:1.15; margin:0 0 12px; letter-spacing:.2px;
+    }
+    .tagline{
+      font-size: clamp(16px, 2.2vw, 20px);
+      color:var(--muted); margin:0 0 10px;
+    }
+
+    section{padding: 24px 0;}
+    .section-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    h2{
+      font-size: clamp(20px, 3vw, 28px);
+      margin:0 0 8px;
+      letter-spacing:.2px;
+      font-weight: 500;                   
+      line-height: 1.3;
+      color: var(--ink);                  
+      margin: 0 0 1rem;
+    }
+    p{
+      margin:0 0 14px;
+      text-align: justify;
+      text-align-last: left;
+    }
+
+    .pill{
+      display:inline-block;
+      padding:.36rem .7rem;
+      border-radius:999px;
+      border:1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+      color:var(--muted);
+      font-size:.9rem;
+      margin-bottom:10px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+    }
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr;}
+    }
+
+    .soft{
+      background:var(--surface);
+      border:1px solid color-mix(in oklab, var(--ink) 8%, transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:24px;
+    }
+
+    footer{
+      padding:36px 0 72px;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .hero h1 {
+      text-align: center;
+      font-size: clamp(24px, 4vw, 40px);  
+      font-weight: 500;                   
+      line-height: 1.3;
+      color: var(--ink);                  
+      margin: 0 0 1rem;
+      letter-spacing: 0.3px;              
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <div class="brand"><span class="dot" aria-hidden="true"></span>Ataraxia Research</div>
+      <nav aria-label="Primary">
+        <a class="link" href="#what">What we do</a>
+        <a class="link" href="#who">Who we are</a>
+        <a class="link" href="#mission">Mission</a>
+        <a class="link" href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 style="text-align:center;">Clarity for the Heart, Powered by Intelligence.</h1>
+      <div class="wrap">
+        <div class="card">
+          <p>We bring science, emotional intelligence, and technology together to help relationships thrive—with understanding at the core.</p>
+          <p>At Ataraxia Research, we are redefining how people understand and navigate romantic relationships. Our mission is simple yet transformative: to harness the power of intelligent conversation analysis to bring clarity, empathy, and psychological insight into the complexities of human connection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="what">
+      <div class="wrap section-inner">
+        <h2>What are we doing?</h2>
+        <p>We’re bringing smart intelligence to matters of the heart. The idea is simple: share your conversations, and our assistant makes sense of them, uncovering emotional dynamics, psychological insights, and what’s working or not. Instead of leaving romance to assumptions or miscommunication, we offer clarity so you can understand where things stand, where they’re headed, and what might help. Love is complex, but understanding it doesn’t have to be.</p>
+      </div>
+    </section>
+
+    <section id="mission">
+      <div class="wrap section-inner grid">
+        <div class="soft">
+          <h2>How it helps</h2>
+          <p>By analyzing interactions, the system identifies emotional patterns, communication dynamics, and psychological cues between partners. It then offers thoughtful insights into what might be going wrong, where the relationship is headed, and what can be done to foster deeper understanding and emotional alignment.</p>
+        </div>
+        <div class="soft">
+          <h2>Our philosophy</h2>
+          <p>Romance shouldn’t rely on guesswork, miscommunication, or unspoken frustration. With Ataraxia, we bring grounded analysis that centers empathy and clarity—helping you navigate with confidence rather than uncertainty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap section-inner">
+        <div class="soft">
+          <h2>Privacy & Care</h2>
+          <p>We are building an assistant that allows users to share their conversations in a secure and private manner. Your data deserves respect; our approach is designed to prioritize confidentiality and psychological safety.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="who">
+      <div class="wrap section-inner">
+        <h2>Who are we?</h2>
+        <p>We are a group of PhD students based at King’s College London and the University of Sheffield in the United Kingdom.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© Ataraxia Research 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
